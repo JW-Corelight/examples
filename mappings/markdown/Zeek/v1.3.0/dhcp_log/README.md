@@ -14,9 +14,9 @@
 | OCSF field                          | Value        | Type       |
 | ----------------------------------- | ------------ | ---------- |
 | `metadata.version`                  | "1.3.0"      |            |
-| `category_uid`                      | "4"          | Integer    |
-| `class_uid`                         | "4004"       | Integer    |
-| `severity_id`                       | "1"          | Integer    |
+| `category_uid`                      | 4            | Integer    |
+| `class_uid`                         | 4004         | Integer    |
+| `severity_id`                       | 1            | Integer    |
 | `metadata.product.name`             | "Zeek"       |            |
 | `metadata.product.vendor_name`      | "Zeek"       |            |
 | `connection_info.protocol_num`      | 17           | Integer    |
