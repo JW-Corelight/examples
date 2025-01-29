@@ -57,3 +57,4 @@ Fields described here are subject to dynamic mappings contingent on a conditiona
 | ---------- | ----------------- | ------------------------------------------------------------------- |
 | `unmapped` | `requested_addr`  | IP address requested by the client.                                 |
 | `unmapped` | `assigned_addr`   | IP address assigned by the server.                                  |
+| `uid(s[])` | `uids`            | A series of unique identifiers of the connections over which DHCP is occurring. This behavior with multiple connections is unique to DHCP because of the way it uses broadcast packets on local networks. |
