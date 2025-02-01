@@ -1,0 +1,38 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Zeek"
+    },
+    "logged_time": 1729165829,
+    "loggers": [{"name": "sensor01"}],
+    "log_name": "notice"
+  },
+  "category_uid": 2,
+  "class_uid": 2004,
+  "time": 1729165829,
+  "evidences": [
+    {
+      "src_endpoint": {
+        "ip": "192.168.1.100",
+        "port": 54321
+      },
+      "dst_endpoint": {
+        "ip": "10.0.0.1",
+        "port": 80
+      }
+    }
+  ],
+  "finding_info": {
+    "title": "HTTP::SQL_Injection_Attempt"
+  },
+  "message": "Potential SQLi in URI query parameter: param=' OR 1=1--",
+  "severity": "High",
+  "severity_id": 4,
+  "observables": [
+    {"value": "param=' OR 1=1--", "type": "other"}
+  ],
+  "status_id": 1,
+  "status_detail": "ACTION_LOG"
+}
