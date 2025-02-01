@@ -1,0 +1,23 @@
+{
+  "ts": 1294816093.541575,
+  "id": "F7pV6T2GVSZKsj51hb",
+  "machine": "I386",
+  "compile_ts": 1254808269.0,
+  "os": "Windows XP x64 or Server 2003",
+  "subsystem": "WINDOWS_GUI",
+  "is_exe": true,
+  "is_64bit": false,
+  "uses_aslr": false,
+  "uses_dep": false,
+  "uses_code_integrity": false,
+  "uses_seh": true,
+  "has_import_table": true,
+  "has_export_table": false,
+  "has_cert_table": true,
+  "has_debug_data": true,
+  "section_names": [
+    ".text",
+    ".data",
+    ".rsrc"
+  ]
+}
