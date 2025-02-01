@@ -1,0 +1,19 @@
+{
+"_path": "suricata_corelight",
+"_system_name": "sensor01",
+"_write_ts": "2024-10-18T14:30:29.149981Z",
+"ts": "2024-10-18T14:30:29.145864Z",
+"id.orig_h": "192.168.1.100",
+"id.orig_p": 54321,
+"id.resp_h": "10.0.0.1",
+"id.resp_p": 80,
+"suri_id": 20241018143029,
+"alert": {
+"severity": 1,
+"action": "block",
+"signature": "ET EXPLOIT Observed Malicious Domain",
+"category": "Network Trojan"
+},
+"community_id": "1:Y3xFWwqEz/J+320LcoH+1CxUoX4",
+"id.vlan": 100
+}
