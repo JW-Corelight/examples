@@ -1,0 +1,36 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek"
+    }
+  },
+  "category_uid": 2,
+  "class_uid": 2006,
+  "activity_id": 1,
+  "file": {
+    "uid": "F7pV6T2GVSZKsj51hb",
+    "created_time": 1254808269,
+    "is_system": true,
+    "xattributes": {
+      "is_64bit": false,
+      "aslr": false,
+      "dep": false,
+      "seh": true,
+      "sections": [
+        ".text",
+        ".data",
+        ".rsrc"
+      ],
+      "certs": true,
+      "debug": true,
+      "imports": true,
+      "exports": false,
+      "integrity": false
+    }
+  },
+  "unmapped": {
+    "machine": "I386",
+    "os": "Windows XP x64 or Server 2003"
+  }
+}
