@@ -1,0 +1,13 @@
+{
+  "_path": "tunnel",
+  "_system_name": "sensor01",
+  "_write_ts": "2024-02-03T16:30:29.149981Z",
+  "ts": "2024-02-03T16:30:29.145864Z",
+  "uid": "CSTYRyVNejbcG9lQf",
+  "id.orig_h": "2001:4f8:4:7:2e0:81ff:fe52:ffff",
+  "id.orig_p": 0,
+  "id.resp_h": "2001:4f8:4:7:2e0:81ff:fe52:9a6b",
+  "id.resp_p": 0,
+  "tunnel_type": "Tunnel::IP",
+  "action": "Tunnel::DISCOVER"
+}
