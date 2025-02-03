@@ -1,0 +1,14 @@
+{
+  "_path": "wireguard",
+  "_system_name": "sensor.cyberlab-20250109a-classic.training.corelight.io",
+  "_write_ts": "2025-01-09T22:52:41.191913Z",
+  "ts": "2025-01-09T22:51:05.552207Z",
+  "uid": "CNR5ME4erfSymlARw9",
+  "id.orig_h": "188.166.170.114",
+  "id.orig_p": 45965,
+  "id.resp_h": "188.166.170.115",
+  "id.resp_p": 51194,
+  "established": true,
+  "initiations": 1,
+  "responses": 1
+}
