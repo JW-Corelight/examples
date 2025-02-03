@@ -1,0 +1,13 @@
+{
+  "_path": "software",
+  "_system_name": "sensor",
+  "_write_ts": "2025-01-10T01:01:06.863800Z",
+  "ts": "2025-01-10T01:01:06.863365Z",
+  "host_header": "10.50.1.54",
+  "host_p": 80,
+  "software_type": "HTTP::SERVER",
+  "name": "A-B WWW",
+  "version.major": 0,
+  "version.minor": 1,
+  "unparsed_version": "A-B WWW/0.1"
+}
