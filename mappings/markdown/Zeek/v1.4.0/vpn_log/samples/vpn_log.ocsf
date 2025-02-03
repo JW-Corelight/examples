@@ -1,0 +1,42 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1704847123,
+    "loggers": [
+      {
+        "name": "sensor.cyberlab-20250109a-classic.training.corelight.io"
+      }
+    ],
+    "uid": "CzyrOx2BOBrXkNxMz"
+  },
+  "category_uid": 4,
+  "class_uid": 4014,
+  "activity_id": 1,
+  "time": 1704847123,
+  "src_endpoint": {
+    "ip": "192.168.56.104",
+    "port": 55161
+  },
+  "dst_endpoint": {
+    "ip": "192.168.56.102",
+    "port": 1194
+  },
+  "protocol_name": "tcp",
+  "tunnel_type": "OpenVPN",
+  "duration": 53707,
+  "severity_id": 1,
+  "traffic": {
+    "bytes_in": 15641,
+    "bytes_out": 17159
+  },
+  "tls": {
+    "subject": "emailAddress=PRO3,name=PRO3,CN=PRO3,OU=PRO3,O=PRO3,L=PRO3,ST=OE,C=AT",
+    "issuer": "emailAddress=PRO3,name=PRO3,CN=PRO3,OU=PRO3,O=PRO3,L=PRO3,ST=OE,C=AT",
+    "ja3": "f0d20361ae57a5c81d94ac774a736a52",
+    "ja3s": "7a2f70a16da750662fc0291d88ebddf8"
+  }
+}
