@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1704847123,
+    "loggers": [
+      {
+        "name": "sensor"
+      }
+    ],
+    "uid": "KfBTFt8cvALBe"
+  },
+  "category_uid": 5,
+  "class_uid": 5003,
+  "activity_id": 1,
+  "time": 1704846054,
+  "user": {
+    "name": "PFTTPKK"
+  },
+  "duration": 0,
+  "severity_id": 1,
+  "observables": [
+    {
+      "value": "192.168.57.4",
+      "type": "ip"
+    },
+    {
+      "value": "192.168.57.3",
+      "type": "ip"
+    },
+    {
+      "value": "RDP",
+      "type": "protocol"
+    }
+  ],
+  "unmapped": {
+    "num_conns": 1,
+    "long_conns": 0,
+    "last_active_interval": 0.0
+  }
+}
