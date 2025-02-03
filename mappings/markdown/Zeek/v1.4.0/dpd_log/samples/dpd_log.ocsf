@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1706979029,
+    "loggers": [
+      {
+        "name": "sensor01"
+      }
+    ],
+    "uid": "CSTYRyVNejbcG9lQf"
+  },
+  "category_uid": 2,
+  "class_uid": 2004,
+  "activity_id": 1,
+  "time": 1706979029,
+  "evidences": [
+    {
+      "src_endpoint": {
+        "ip": "192.168.1.100",
+        "port": 54321
+      },
+      "dst_endpoint": {
+        "ip": "10.0.0.1",
+        "port": 80
+      }
+    }
+  ],
+  "finding_info": {
+    "title": "HTTP"
+  },
+  "message": "not a http request line",
+  "connection_info": {
+    "protocol_name": "tcp"
+  },
+  "severity_id": 2,
+  "observables": [
+    {
+      "value": "GET /invalid HTTP/1.1\r\n",
+      "type": "packet_data"
+    }
+  ]
+}
