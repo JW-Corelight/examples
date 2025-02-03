@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1323202695,
+    "loggers": [
+      {
+        "name": "sensor01"
+      }
+    ],
+    "uid": "C6C7jB4sjAjJTpoalj"
+  },
+  "category_uid": 3,
+  "class_uid": 3002,
+  "activity_id": 1,
+  "time": 1323202695,
+  "auth_protocol_id": 1,
+  "auth_protocol": "NTLM",
+  "src_endpoint": {
+    "ip": "10.0.0.11",
+    "port": 49208,
+    "hostname": "SERVER01"
+  },
+  "dst_endpoint": {
+    "ip": "10.0.0.12",
+    "port": 445,
+    "hostname": "SERVER002",
+    "fqdn": "SERVER002.contoso.com"
+  },
+  "user": {
+    "name": "Administrator",
+    "domain": "CONTOSO"
+  },
+  "status_id": 1,
+  "observables": [
+    {
+      "value": "contoso.com",
+      "type": "domain"
+    }
+  ]
+}
