@@ -1,0 +1,33 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1704847266,
+    "loggers": [
+      {
+        "name": "sensor"
+      }
+    ]
+  },
+  "category_uid": 5,
+  "class_uid": 5020,
+  "activity_id": 1,
+  "time": 1704847266,
+  "device": {
+    "ip": "10.50.1.54",
+    "port": 80
+  },
+  "package": {
+    "name": "A-B WWW",
+    "type": "HTTP::SERVER",
+    "version": "A-B WWW/0.1",
+    "version_info": {
+      "major": 0,
+      "minor": 1
+    }
+  },
+  "severity_id": 1
+}
