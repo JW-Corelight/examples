@@ -1,0 +1,17 @@
+{
+  "_path": "telnet",
+  "_system_name": "sensor01",
+  "_write_ts": "2024-02-03T16:30:29.149981Z",
+  "ts": "2024-02-03T16:30:29.145864Z",
+  "uid": "CSTYRyVNejbcG9lQf",
+  "id.orig_h": "192.168.1.100",
+  "id.orig_p": 54321,
+  "id.resp_h": "10.0.0.1",
+  "id.resp_p": 23,
+  "terminal_type": "XTERM",
+  "terminal_speed": "38400,38400",
+  "x_display_location": "localhost:0",
+  "environ_value_names": ["TERM", "SHELL"],
+  "environ_value_values": ["xterm", "/bin/bash"],
+  "data": "\xff\xfb\x01\xff\xfb\x03"
+}
