@@ -1,0 +1,22 @@
+{
+  "_path": "vpn",
+  "_system_name": "sensor.cyberlab-20250109a-classic.training.corelight.io",
+  "_write_ts": "2025-01-10T00:58:43.826732Z",
+  "ts": "2025-01-10T00:58:43.824830Z",
+  "uid": "CzyrOx2BOBrXkNxMz",
+  "id.orig_h": "192.168.56.104",
+  "id.orig_p": 55161,
+  "id.resp_h": "192.168.56.102",
+  "id.resp_p": 1194,
+  "proto": "tcp",
+  "vpn_type": "VPNInsights::OpenVPN",
+  "service": "spicy_openvpn_tcp_hmac_sha1,ssl",
+  "inferences": ["TLS"],
+  "duration": 53.707890033,
+  "orig_bytes": 15641,
+  "resp_bytes": 17159,
+  "subject": "emailAddress=PRO3,name=PRO3,CN=PRO3,OU=PRO3,O=PRO3,L=PRO3,ST=OE,C=AT",
+  "issuer": "emailAddress=PRO3,name=PRO3,CN=PRO3,OU=PRO3,O=PRO3,L=PRO3,ST=OE,C=AT",
+  "ja3": "f0d20361ae57a5c81d94ac774a736a52",
+  "ja3s": "7a2f70a16da750662fc0291d88ebddf8"
+}
