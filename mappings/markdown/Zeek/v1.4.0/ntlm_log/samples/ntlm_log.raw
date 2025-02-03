@@ -1,0 +1,15 @@
+{
+  "ts": 1323202695.372178,
+  "uid": "C6C7jB4sjAjJTpoalj",
+  "id.orig_h": "10.0.0.11",
+  "id.orig_p": 49208,
+  "id.resp_h": "10.0.0.12",
+  "id.resp_p": 445,
+  "username": "Administrator",
+  "hostname": "SERVER01",
+  "domainname": "CONTOSO",
+  "server_nb_computer_name": "SERVER002",
+  "server_dns_computer_name": "SERVER002.contoso.com",
+  "server_tree_name": "contoso.com",
+  "success": true
+}
