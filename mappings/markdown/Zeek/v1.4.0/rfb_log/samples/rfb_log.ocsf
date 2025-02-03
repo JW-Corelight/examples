@@ -1,0 +1,41 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1706979029,
+    "loggers": [
+      {
+        "name": "sensor"
+      }
+    ],
+    "uid": "CjZzi337nMvIlIoNY5"
+  },
+  "category_uid": 4,
+  "class_uid": 4001,
+  "activity_id": 1,
+  "time": 1706979029,
+  "src_endpoint": {
+    "ip": "192.168.2.115",
+    "port": 49259
+  },
+  "dst_endpoint": {
+    "ip": "192.168.2.125",
+    "port": 5901
+  },
+  "app_name": "root's X desktop (martin-VirtualBox:1)",
+  "connection_info": {
+    "client_version": "3.3",
+    "server_version": "3.8"
+  },
+  "severity_id": 1,
+  "status_id": 1,
+  "unmapped": {
+    "authentication_method": "VNC",
+    "share_flag": true,
+    "width": 1024,
+    "height": 768
+  }
+}
