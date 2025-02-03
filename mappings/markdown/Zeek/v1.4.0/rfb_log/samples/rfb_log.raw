@@ -1,0 +1,21 @@
+{
+  "_path": "rfb",
+  "_system_name": "sensor",
+  "_write_ts": "2024-02-03T16:30:29.149981Z",
+  "ts": "2024-02-03T16:30:29.145864Z",
+  "uid": "CjZzi337nMvIlIoNY5",
+  "id.orig_h": "192.168.2.115",
+  "id.orig_p": 49259,
+  "id.resp_h": "192.168.2.125",
+  "id.resp_p": 5901,
+  "client_major_version": "003",
+  "client_minor_version": "003",
+  "server_major_version": "003",
+  "server_minor_version": "008",
+  "authentication_method": "VNC",
+  "auth": true,
+  "share_flag": true,
+  "desktop_name": "root's X desktop (martin-VirtualBox:1)",
+  "width": 1024,
+  "height": 768
+}
