@@ -1,0 +1,15 @@
+{
+  "_path": "smb_mapping",
+  "_system_name": "sensor01",
+  "_write_ts": "2024-02-03T16:30:29.149981Z",
+  "ts": "2024-02-03T16:30:29.145864Z",
+  "uid": "CSTYRyVNejbcG9lQf",
+  "id.orig_h": "192.168.56.1",
+  "id.orig_p": 56062,
+  "id.resp_h": "192.168.56.101",
+  "id.resp_p": 445,
+  "path": "\\192.168.56.101\\MY PICTURES",
+  "service": "A:",
+  "native_file_system": "NTFS",
+  "share_type": "DISK"
+}
