@@ -1,0 +1,19 @@
+{
+  "_path": "radius",
+  "_system_name": "sensor01",
+  "_write_ts": "2024-02-03T16:30:29.149981Z",
+  "ts": "2024-02-03T16:30:29.145864Z",
+  "uid": "CSTYRyVNejbcG9lQf",
+  "id.orig_h": "192.168.1.100",
+  "id.orig_p": 54321,
+  "id.resp_h": "10.0.0.2",
+  "id.resp_p": 1812,
+  "username": "bob",
+  "mac": "00:11:22:33:44:55",
+  "framed_addr": "10.0.0.50",
+  "tunnel_client": "vpn.example.com",
+  "connect_info": "802.1X",
+  "reply_msg": "Access granted",
+  "result": "success",
+  "ttl": 0.023
+}
