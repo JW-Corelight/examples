@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1368517392,
+    "loggers": [
+      {
+        "name": "sensor01"
+      }
+    ],
+    "uid": "CjjPWV29j5BDgmFNKd"
+  },
+  "category_uid": 4,
+  "class_uid": 4014,
+  "activity_id": 1,
+  "time": 1368517392,
+  "src_endpoint": {
+    "ip": "192.168.0.2",
+    "port": 55951
+  },
+  "dst_endpoint": {
+    "ip": "192.168.0.1",
+    "port": 10080
+  },
+  "protocol_name": "SOCKSv5",
+  "user": {
+    "name": "bob"
+  },
+  "severity_id": 1,
+  "status_id": 1,
+  "observables": [
+    {
+      "value": "192.168.0.2",
+      "type": "hostname"
+    },
+    {
+      "value": "192.168.0.1",
+      "type": "hostname"
+    }
+  ],
+  "unmapped": {
+    "request_p": 22,
+    "bound_p": 55951
+  }
+}
