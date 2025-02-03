@@ -1,0 +1,20 @@
+{
+  "_path": "known_certs",
+  "_system_name": "sensor",
+  "_write_ts": "2025-01-10T01:14:50.617928Z",
+  "ts": "2025-01-10T00:58:42.492555Z",
+  "duration": 0.0,
+  "kuid": "KfBTFt8cvALBe",
+  "host_ip": "192.168.57.4",
+  "hash": "53201266d68dec1e54949febb05a14c26d36bd86",
+  "port": 3389,
+  "protocol": "tcp",
+  "serial": "52A02E7615996A954A8BB370566F1E88",
+  "subject": "CN=WIN-HKC3UIF6JLF",
+  "issuer_subject": "CN=WIN-HKC3UIF6JLF",
+  "num_conns": 1,
+  "long_conns": 0,
+  "annotations": [],
+  "last_active_session": "",
+  "last_active_interval": 0.0
+}
