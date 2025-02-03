@@ -1,0 +1,37 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1706979029,
+    "loggers": [
+      {
+        "name": "sensor01"
+      }
+    ],
+    "uid": "CSTYRyVNejbcG9lQf"
+  },
+  "category_uid": 4,
+  "class_uid": 4006,
+  "activity_id": 99,
+  "activity_name": "Share Map",
+  "time": 1706979029,
+  "src_endpoint": {
+    "ip": "192.168.56.1",
+    "port": 56062
+  },
+  "dst_endpoint": {
+    "ip": "192.168.56.101",
+    "port": 445
+  },
+  "share": "MY PICTURES",
+  "share_type": "DISK",
+  "share_type_id": 1,
+  "severity_id": 1,
+  "unmapped": {
+    "native_file_system": "NTFS",
+    "service": "A:"
+  }
+}
