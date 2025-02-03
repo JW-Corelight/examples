@@ -1,0 +1,48 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1706979029,
+    "loggers": [
+      {
+        "name": "sensor01"
+      }
+    ],
+    "uid": "CSTYRyVNejbcG9lQf"
+  },
+  "category_uid": 2,
+  "class_uid": 2004,
+  "activity_id": 1,
+  "time": 1706979029,
+  "evidences": [
+    {
+      "src_endpoint": {
+        "ip": "192.168.1.100",
+        "port": 54321
+      },
+      "dst_endpoint": {
+        "ip": "10.0.0.1",
+        "port": 80
+      },
+      "file": {
+        "uid": "FxR5Jl1aKG4ZRwUd4c",
+        "mime_type": "application/x-executable",
+        "desc": "HTTP GET /malware.exe"
+      }
+    }
+  ],
+  "finding_info": {
+    "data_sources": ["threat_feed_alpha"]
+  },
+  "severity_id": 3,
+  "observables": [
+    {
+      "value": "malicious.example.com",
+      "type": "domain",
+      "location": "DNS::IN_REQUEST"
+    }
+  ]
+}
