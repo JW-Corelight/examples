@@ -1,0 +1,16 @@
+{
+  "_path": "ldap",
+  "_system_name": "sensor.cyberlab-20250109a-classic.training.corelight.io",
+  "_write_ts": "2025-01-10T00:56:58.009348Z",
+  "ts": "2025-01-10T00:56:58.009348Z",
+  "uid": "CmHBIe3ZIV5U024DWd",
+  "id.orig_h": "198.51.100.10",
+  "id.orig_p": 39010,
+  "id.resp_h": "203.0.113.217",
+  "id.resp_p": 1389,
+  "proto": "tcp",
+  "message_id": 1,
+  "version": 3,
+  "opcode": ["bind simple"],
+  "result": ["success"]
+}
