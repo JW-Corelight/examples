@@ -1,0 +1,35 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1704841961,
+    "loggers": [
+      {
+        "name": "sensor.cyberlab-20250109a-classic.training.corelight.io"
+      }
+    ],
+    "uid": "CNR5ME4erfSymlARw9"
+  },
+  "category_uid": 4,
+  "class_uid": 4014,
+  "activity_id": 1,
+  "time": 1704841865,
+  "src_endpoint": {
+    "ip": "188.166.170.114",
+    "port": 45965
+  },
+  "dst_endpoint": {
+    "ip": "188.166.170.115",
+    "port": 51194
+  },
+  "protocol_name": "WireGuard",
+  "severity_id": 1,
+  "status_id": 1,
+  "unmapped": {
+    "initiations": 1,
+    "responses": 1
+  }
+}
