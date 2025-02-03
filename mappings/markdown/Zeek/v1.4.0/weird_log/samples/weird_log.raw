@@ -1,0 +1,15 @@
+{
+  "_path": "weird",
+  "_system_name": "sensor01",
+  "_write_ts": "2024-02-03T16:30:29.149981Z",
+  "ts": "2024-02-03T16:30:29.145864Z",
+  "uid": "CSTYRyVNejbcG9lQf",
+  "id.orig_h": "192.168.1.100",
+  "id.orig_p": 54321,
+  "id.resp_h": "10.0.0.1",
+  "id.resp_p": 80,
+  "name": "HTTP_version_mismatch",
+  "addl": "1.0 vs 1.1",
+  "notice": false,
+  "source": "HTTP"
+}
