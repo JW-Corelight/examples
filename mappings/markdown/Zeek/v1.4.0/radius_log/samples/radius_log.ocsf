@@ -1,0 +1,53 @@
+{
+  "metadata": {
+    "version": "1.3.0",
+    "product": {
+      "name": "Zeek",
+      "vendor_name": "Corelight"
+    },
+    "logged_time": 1706979029,
+    "loggers": [
+      {
+        "name": "sensor01"
+      }
+    ],
+    "uid": "CSTYRyVNejbcG9lQf"
+  },
+  "category_uid": 3,
+  "class_uid": 3002,
+  "activity_id": 1,
+  "time": 1706979029,
+  "auth_protocol_id": 10,
+  "auth_protocol": "RADIUS",
+  "src_endpoint": {
+    "ip": "192.168.1.100",
+    "port": 54321
+  },
+  "dst_endpoint": {
+    "ip": "10.0.0.2",
+    "port": 1812
+  },
+  "user": {
+    "name": "bob"
+  },
+  "message": "Access granted",
+  "duration": 23,
+  "status_id": 1,
+  "observables": [
+    {
+      "value": "00:11:22:33:44:55",
+      "type": "mac_addr"
+    },
+    {
+      "value": "10.0.0.50",
+      "type": "ip"
+    },
+    {
+      "value": "vpn.example.com",
+      "type": "hostname"
+    }
+  ],
+  "unmapped": {
+    "connect_info": "802.1X"
+  }
+}
