@@ -1,0 +1,17 @@
+{
+  "_path": "known_users",
+  "_system_name": "sensor",
+  "_write_ts": "2025-01-10T01:14:50.617928Z",
+  "ts": "2025-01-10T00:58:47.987343Z",
+  "duration": 0.0,
+  "kuid": "KfBTFt8cvALBe",
+  "host_ip": "192.168.57.4",
+  "remote_ip": "192.168.57.3",
+  "user": "PFTTPKK",
+  "protocol": "RDP",
+  "num_conns": 1,
+  "long_conns": 0,
+  "annotations": [],
+  "last_active_session": "",
+  "last_active_interval": 0.0
+}
