@@ -1,19 +1,43 @@
 {
-"_path": "suricata_corelight",
-"_system_name": "sensor01",
-"_write_ts": "2024-10-18T14:30:29.149981Z",
-"ts": "2024-10-18T14:30:29.145864Z",
-"id.orig_h": "192.168.1.100",
-"id.orig_p": 54321,
-"id.resp_h": "10.0.0.1",
-"id.resp_p": 80,
-"suri_id": 20241018143029,
-"alert": {
-"severity": 1,
-"action": "block",
-"signature": "ET EXPLOIT Observed Malicious Domain",
-"category": "Network Trojan"
-},
-"community_id": "1:Y3xFWwqEz/J+320LcoH+1CxUoX4",
-"id.vlan": 100
+  "_path": "suricata_corelight",
+  "_system_name": "zeek-sensor-01",
+  "_write_ts": "2025-03-21T19:14:32.845167Z",
+  "alert": {
+    "action": "allowed",
+    "category": "Potentially Bad Traffic",
+    "gid": 1,
+    "metadata": [
+      {
+        "key": "created_at",
+        "value": "2021-01-15"
+      },
+      {
+        "key": "updated_at",
+        "value": "2024-11-20"
+      }
+    ],
+    "rev": 1,
+    "severity": 2,
+    "signature": "ET POLICY SSH Outbound Connection",
+    "signature_id": 2001219
+  },
+  "app_proto": "ssh",
+  "community_id": "1:POtUu1i1Tiq0ndLU4IYprxCFqeQ=",
+  "flow": {
+    "bytes_toclient": 3744,
+    "bytes_toserver": 2128,
+    "pkts_toclient": 15,
+    "pkts_toserver": 11,
+    "start": "2025-03-21T19:14:30.124568Z",
+    "toserver": 1
+  },
+  "flow_id": 123456789012345,
+  "id.orig_h": "10.2.14.87",
+  "id.orig_p": 59213,
+  "id.resp_h": "192.168.10.55",
+  "id.resp_p": 22,
+  "proto": "TCP",
+  "suri_id": "SSbwfJm6tAe1Rvyv8",
+  "ts": "2025-03-21T19:14:32.724385Z",
+  "uid": "CjYbdr3ocVf0qHSjY8"
 }
