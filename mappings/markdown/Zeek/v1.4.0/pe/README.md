@@ -27,6 +27,7 @@
 | metadata.logged_time | _write_ts | Timestamp indicating when the log entry was written to disk. | Convert to epoch value. Type is timestamp_t (Long). |
 | metadata.loggers[].name | _system_name | Name of the system or logging subsystem generating the log entry. |  |
 | metadata.log_name | _path | Log name. |  |
+| file.uid | id | Unique identifier for the file. | Type is String. |
 | file.created_time | compile_ts | PE compilation timestamp. | Convert to epoch value. Type is timestamp_t (Long). |
 | file.xattributes.is_64bit | is_64bit | Indicates if the PE file is for a 64-bit architecture. | Type is Boolean. |
 | file.xattributes.aslr | uses_aslr | Indicates if ASLR is implemented in the PE file. | Type is Boolean. |
@@ -39,11 +40,10 @@
 | file.xattributes.imports | has_import_table | Indicates if an import table is present in the PE file. | Type is Boolean. |
 | file.xattributes.exports | has_export_table | Indicates if an export table is present in the PE file. | Type is Boolean. |
 | file.xattributes.integrity | uses_code_integrity | Indicates if code integrity is implemented. | Type is Boolean. |
-| file.uid | id | Unique identifier for the file. | Type is String. |
 
 ### Unmapped:
 
 | OCSF | Raw | Zeek Field Description |
 | :---- | :---- | :---- |
-| unmapped | machine | Target machine architecture. |
-| unmapped | os | Required operating system version. |
+| unmapped | machine | Target machine architecture. Integer code representing the CPU type. |
+| unmapped | os | Required operating system version. Represented as an integer code. |
