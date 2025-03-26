@@ -1,44 +1,49 @@
 # Event Dossier: Zeek pe.log
-### Summary:
-- **Description**: Maps Portable Executable (PE) characteristics to OCSF Data Security Finding
-- **Event References**:
-  - https://schema.ocsf.io/1.3.0/classes/data_security_finding
-  - https://docs.zeek.org/en/master/scripts/policy/misc/pe.zeek.html
 
-### OCSF Version: v1.3.0
+### Summary:
+- **Description**: Translates a Zeek pe.log to OCSF Data Security Finding class.  
+- **Event References**:  
+  - [https://schema.ocsf.io/1.3.0/classes/data_security_finding](https://schema.ocsf.io/1.3.0/classes/data_security_finding)  
+  - [https://docs.zeek.org/en/master/scripts/policy/misc/pe.zeek.html](https://docs.zeek.org/en/master/scripts/policy/misc/pe.zeek.html)
 
 ### Static value mapping:
-| OCSF Field                     | Value          | Type       |
-|-------------------------------|----------------|------------|
-| `metadata.version`            | "1.3.0"        |            |
-| `category_uid`                | 2              | Integer    |
-| `class_uid`                   | 2006           | Integer    |
-| `activity_id`                 | 1              | Integer (Create) |
-| `metadata.product.name`       | "Zeek"         |            |
+
+| OCSF field | Value | Type |
+| :---- | :---- | :---- |
+| metadata.version | "1.3.0" |  |
+| category_uid | 2 | Integer |
+| class_uid | 2006 | Integer |
+| activity_id | 1 | Integer |
+| metadata.product.name | "Zeek" |  |
+| metadata.product.vendor_name | "Zeek" |  |
+| severity_id | 1 | Integer |
 
 ### Direct field mapping:
-| OCSF Field                     | Zeek Field              | Description                                | Notes                      |
-|-------------------------------|-------------------------|--------------------------------------------|----------------------------|
-| `file.created_time`           | `compile_ts`            | PE compilation timestamp                   | Convert to epoch timestamp |
-| `file.xattributes.is_64bit`   | `is_64bit`              | 64-bit architecture flag                  | Boolean mapping            |
-| `file.xattributes.aslr`      | `uses_aslr`             | ASLR implementation status                 | Boolean mapping            |
-| `file.xattributes.dep`       | `uses_dep`              | Data Execution Prevention status           | Boolean mapping            |
-| `file.xattributes.seh`       | `uses_seh`              | Structured Exception Handling usage        | Boolean mapping            |
-| `file.xattributes.sections`  | `section_names`         | PE section names                          | Array preservation         |
-| `file.xattributes.certs`     | `has_cert_table`        | Certificate table presence                | Boolean mapping            |
-| `file.xattributes.debug`     | `has_debug_data`        | Debug data existence                       | Boolean mapping            |
-| `file.is_system`             | `subsystem`             | Windows subsystem type                     | GUI/CUI mapping            |
 
-### Extended PE characteristics mapping:
-| OCSF File Attribute           | Zeek Field              | Type        |
-|-------------------------------|-------------------------|-------------|
-| `file.xattributes.imports`    | `has_import_table`      | Boolean     |
-| `file.xattributes.exports`    | `has_export_table`      | Boolean     |
-| `file.xattributes.integrity`  | `uses_code_integrity`   | Boolean     |
-| `file.uid`                    | `id`                    | String      |
+| OCSF | Raw | Zeek Field Description | Notes |
+| :---- | :---- | :---- | :---- |
+| time | ts | Timestamp when the PE file was analyzed. | Convert to epoch value. Type is timestamp_t (Long). |
+| start_time | ts | Timestamp when the PE file was analyzed. | Convert to epoch value. Type is timestamp_t (Long). |
+| metadata.logged_time | _write_ts | Timestamp indicating when the log entry was written to disk. | Convert to epoch value. Type is timestamp_t (Long). |
+| metadata.loggers[].name | _system_name | Name of the system or logging subsystem generating the log entry. |  |
+| metadata.log_name | _path | Log name. |  |
+| file.created_time | compile_ts | PE compilation timestamp. | Convert to epoch value. Type is timestamp_t (Long). |
+| file.xattributes.is_64bit | is_64bit | Indicates if the PE file is for a 64-bit architecture. | Type is Boolean. |
+| file.xattributes.aslr | uses_aslr | Indicates if ASLR is implemented in the PE file. | Type is Boolean. |
+| file.xattributes.dep | uses_dep | Indicates if Data Execution Prevention is implemented. | Type is Boolean. |
+| file.xattributes.seh | uses_seh | Indicates if Structured Exception Handling is implemented. | Type is Boolean. |
+| file.xattributes.sections | section_names | Names of the sections in the PE file. | Type is Array of String. |
+| file.xattributes.certs | has_cert_table | Indicates if a certificate table is present in the PE file. | Type is Boolean. |
+| file.xattributes.debug | has_debug_data | Indicates if debug data is present in the PE file. | Type is Boolean. |
+| file.is_system | subsystem | Windows subsystem type. | Convert from code to Boolean for system status. |
+| file.xattributes.imports | has_import_table | Indicates if an import table is present in the PE file. | Type is Boolean. |
+| file.xattributes.exports | has_export_table | Indicates if an export table is present in the PE file. | Type is Boolean. |
+| file.xattributes.integrity | uses_code_integrity | Indicates if code integrity is implemented. | Type is Boolean. |
+| file.uid | id | Unique identifier for the file. | Type is String. |
 
-### Unmapped fields:
-| Zeek Field               | Description                                  |
-|--------------------------|----------------------------------------------|
-| `machine`                | Target machine architecture                  |
-| `os`                     | Required operating system version            |
+### Unmapped:
+
+| OCSF | Raw | Zeek Field Description |
+| :---- | :---- | :---- |
+| unmapped | machine | Target machine architecture. |
+| unmapped | os | Required operating system version. |

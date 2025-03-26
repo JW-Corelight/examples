@@ -2,35 +2,47 @@
   "metadata": {
     "version": "1.3.0",
     "product": {
-      "name": "Zeek"
-    }
+      "name": "Zeek",
+      "vendor_name": "Zeek"
+    },
+    "logged_time": 1742685731,
+    "loggers": [
+      {
+        "name": "zeek-sensor-01"
+      }
+    ],
+    "log_name": "pe",
+    "uid": "FXxGs01vN5rlMgkg7"
   },
   "category_uid": 2,
   "class_uid": 2006,
   "activity_id": 1,
+  "severity_id": 1,
+  "time": 1742685730,
+  "start_time": 1742685730,
   "file": {
-    "uid": "F7pV6T2GVSZKsj51hb",
-    "created_time": 1254808269,
+    "uid": "FXxGs01vN5rlMgkg7",
+    "created_time": 1733940235,
     "is_system": true,
     "xattributes": {
-      "is_64bit": false,
-      "aslr": false,
-      "dep": false,
-      "seh": true,
+      "is_64bit": true,
+      "aslr": true,
+      "dep": true,
+      "seh": false,
       "sections": [
         ".text",
+        ".rdata",
         ".data",
-        ".rsrc"
+        ".pdata",
+        ".rsrc",
+        ".reloc"
       ],
       "certs": true,
       "debug": true,
       "imports": true,
       "exports": false,
-      "integrity": false
+      "integrity": false,
+      "is_exe": true
     }
-  },
-  "unmapped": {
-    "machine": "I386",
-    "os": "Windows XP x64 or Server 2003"
   }
 }
