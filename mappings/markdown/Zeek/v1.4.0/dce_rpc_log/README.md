@@ -3,7 +3,7 @@
 ### Summary:
 - **Description**: Translates a Zeek dce_rpc.log to OCSF SMB Activity class.  
 - **Event References**:  
-  - [https://schema.ocsf.io/1.3.0/classes/smb_activity](https://schema.ocsf.io/1.3.0/classes/smb_activity)  
+  - [https://schema.ocsf.io/1.4.0/classes/smb_activity](https://schema.ocsf.io/1.4.0/classes/smb_activity)  
   - [https://docs.zeek.org/en/master/logs/dce_rpc.html](https://docs.zeek.org/en/master/logs/dce_rpc.html)
   - [https://docs.zeek.org/en/master/scripts/base/protocols/dce-rpc/main.zeek.html](https://docs.zeek.org/en/master/scripts/base/protocols/dce-rpc/main.zeek.html)
 
@@ -11,49 +11,51 @@
 
 | OCSF field | Value | Type |
 | :---- | :---- | :---- |
-| metadata.version | "1.3.0" |  |
-| category_uid | 4 | Integer |
-| class_uid | 4006 | Integer |
-| metadata.product.name | "Zeek" |  |
-| metadata.product.vendor_name | "Zeek" |  |
-| severity_id | 1 | Integer |
-| activity_id | 3 | Integer |
-| activity_name | "RPC" | Type is String. |
+| `metadata.version` | "1.4.0" | String |
+| `category_uid` | 4 | Integer |
+| `class_uid` | 4006 | Integer |
+| `metadata.product.name` | "Zeek" | String |
+| `metadata.product.vendor_name` | "Zeek" | String |
+| `severity_id` | 1 | Integer |
+| `activity_id` | 3 | Integer |
+| `activity_name` | "RPC" | String |
+| `connection_info.protocol_name` | "DCE/RPC" | String |
 
 ### Direct field mapping:
 
 | OCSF | Raw | Zeek Field Description | Notes |
 | :---- | :---- | :---- | :---- |
-| time | ts | Timestamp when the DCE/RPC call occurred. | Convert to epoch value. Type is timestamp_t (Long). |
-| start_time | ts | Timestamp when the DCE/RPC call occurred. | Convert to epoch value. Type is timestamp_t (Long). |
-| metadata.logged_time | _write_ts | Timestamp indicating when the log entry was written to disk. | Convert to epoch value. Type is timestamp_t (Long). |
-| metadata.loggers[].name | _system_name | Name of the system or logging subsystem generating the log entry. |  |
-| metadata.log_name | _path | Log name. |  |
-| metadata.uid | uid | Unique ID for the connection. |  |
-| src_endpoint.ip | id.orig_h | The client's IP address. | Type is ip_t. |
-| src_endpoint.port | id.orig_p | The client's port number. | Type is port_t (Integer). |
-| dst_endpoint.ip | id.resp_h | The server's IP address. | Type is ip_t. |
-| dst_endpoint.port | id.resp_p | The server's port number. | Type is port_t (Integer). |
-| share | named_pipe | Named pipe path used for the RPC call. | Strip "\\PIPE\\" prefix if present. Type is String. |
-| dce_rpc.endpoint | endpoint | Service endpoint name. | Service identifier. Type is String. |
-| dce_rpc.operation | operation | RPC operation name. | Method or function being called. Type is String. |
-| dce_rpc.rtt | rtt | Round trip time in seconds. | Time between request and response. Type is Double. |
+| `time` | `ts` | DCE/RPC call timestamp | Convert to epoch. Type: `timestamp_t` (Long) |
+| `start_time` | `ts` | Call initiation time | Convert to epoch. Type: `timestamp_t` (Long) |
+| `metadata.logged_time` | `_write_ts` | Log write time | Convert to epoch. Type: `timestamp_t` (Long) |
+| `metadata.loggers[].name` | `_system_name` | Logging subsystem | Type: `string_t` |
+| `metadata.log_name` | `_path` | Log identifier | Type: `string_t` |
+| `metadata.uid` | `uid` | Unique ID for the connection. | Type: `string_t` |
+| `src_endpoint.ip` | `id.orig_h` | Client IP | Type: `ip_t` |
+| `src_endpoint.port` | `id.orig_p` | Client port | Type: `port_t` (Integer) |
+| `dst_endpoint.ip` | `id.resp_h` | Server IP | Type: `ip_t` |
+| `dst_endpoint.port` | `id.resp_p` | Server port | Type: `port_t` (Integer) |
+| `dce_rpc.operation` | `operation` | RPC method called | Type: `string_t` |
+| `dce_rpc.rtt` | `rtt` | Round-trip time | Convert to milliseconds. Type: `double_t` |
+| `share` | `named_pipe` | SMB pipe path | Remove `\PIPE\` prefix. Type: `string_t` |
 
 ### Conditional mapping:
 
 | OCSF | Raw | Zeek Field Description | Evaluation Conditions |
 | :---- | :---- | :---- | :---- |
-| type_uid | activity_id | Type identifier. | Calculate as (class_uid * 100) + activity_id = 400603. Type is Integer. |
-| status_id | rtt | Success of the operation. | If rtt present, "1" (Success), otherwise "0" (Unknown). Type is Integer. |
-| dce_rpc.interface_uuid | endpoint | Interface UUID. | Extract UUID from endpoint if present in format. Type is String. |
+| `activity_id` | `operation` | RPC activity type | Map "Bind" → 8 (Session), "Request" → 1 (Execute). Else 0 (Unknown) |
+| `activity_name` | `activity_id` | Activity label | Derived from mapped `activity_id` value |
+| `type_uid` | `activity_id` | Event type ID | Calculate as `(4006 * 100) + 3 = 400603`. |
+| `dce_rpc.interface_uuid` | `endpoint` | Service interface | Extract UUID patterns (8-4-4-4-12 format). Type: `uuid_t` |
+| `status_id` | `rtt` | Operation success | `rtt > 0 → 1` (Success), `null → 0` (Unknown). Confidence: Medium (false negatives possible) |
+| `file.uid` | `fid` | SMB file handle | Only map when `fid` exists. Type: `string_t` |
+| `auth_info.auth_protocol` | `auth_type` | Auth mechanism | Map "NT LAN Manager" → `3`, "Kerberos" → `4`. Type: `integer_t` |
 
 ### Unmapped:
 
-| OCSF | Raw | Zeek Field Description |
-| :---- | :---- | :---- |
-| unmapped | context_id | Context ID for the DCE/RPC call. | Integer identifier for this specific call. Type is Integer. |
-| unmapped | opnum | Operation number for the endpoint function call. | Numeric identifier for the operation. Type is Integer. |
-| unmapped | fid | File ID, if this DCE/RPC message was sent over SMB. | Present when the transport is SMB. Type is Integer. |
-| unmapped | arg | Argument data provided to the call. | May contain sensitive data. Type is String. |
-| unmapped | interfaces | List of interface UUIDs seen for this session. | Type is Array of String. |
-| unmapped | auth_type | Authentication method used for the session. | Type is String. |
+| OCSF | Raw | Zeek Field Description | Notes |
+| :---- | :---- | :---- | :---- |
+| `extension.context` | `context_id` | Call identifier | Requires custom OCSF extension |
+| `observables[].value` | `opnum` | Operation code | Map as `observables[].type_id: 67` (Other) |
+| `evidence.artifacts` | `arg` | Call arguments | Sensitive data excluded per OCSF policy |
+| `dce_rpc.interfaces` | `interfaces` | UUID list | No array support in OCSF 1.4.0 `dce_rpc` object |
