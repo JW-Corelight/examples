@@ -1,4 +1,4 @@
-# Open Cybersecurity Schema Framework (OCSF) Event Dossier: Zeek ntp.log
+# Event Dossier: Zeek ntp.log
 
 ## Summary:
 - **Description**: Translates a Zeek ntp.log to OCSF NTP Activity class.  
