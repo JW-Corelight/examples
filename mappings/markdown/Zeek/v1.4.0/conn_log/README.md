@@ -18,7 +18,6 @@
 | `severity_id`                       | 1            | Integer    |
 | `metadata.product.name`             | "Zeek"       |            |
 | `metadata.product.vendor_name`      | "Zeek"       |            |
-| `connection_info.direction_id`      | 0            | Integer    |
 
 
  ### Direct field mapping:
@@ -49,6 +48,7 @@
 | `traffic.bytes_out`           | `orig_bytes`    | The number of payload bytes the originator sent.                                        | Type is long_t.         |
 | `traffic.packets_out`         | `orig_pkts`     | Number of packets that the originator sent.                                             | Type is long_t.         |
 | `traffic.bytes_missed`        | `missed_bytes`  | Indicates the number of bytes missed in content gaps.                                   | Type is long_t.         |
+| `src_endpoint.vlan_uid`       | `vlan`          | The outer VLAN for this connection, if applicable.                                      | Type is Integer.        |
 
 
  ### Conditional mapping:
@@ -61,13 +61,14 @@ Fields described here are subject to dynamic mappings contingent on a conditiona
 | `traffic.packets`             | `orig_pkts` <br>+ `resp_pkts`    | The total number of packets sent by both the originator and responder.       | Sum of `orig_pkts` + `resp_pkts` <br>Type is long_t.       |
 | `observables[].value`         | `id.orig_h_name.vals`            | The set of names observed for a given originator address.                    | In a record where <br>`observables[].name` = "src_endpoint.hostname" <br>and `observables[].type_id` = "1" (Type is Integer) <br>and`observables[].reputation.provider` = `id.orig_h_name.src` <br>and`observables[].reputation.base_score` = "0.0" (Type is float_t) <br>and `observables[].reputation.score_id` = "0" (Type is Integer) |
 | `observables[].value`         | `id.resp_h_name.vals`            | The set of names observed for a given responder address.                     | In a record where <br>`observables[].name` = "dst_endpoint.hostname" <br>and `observables[].type_id` = "1" (Type is Integer) <br>and`observables[].reputation.provider` = `id.resp_h_name.src` <br>and`observables[].reputation.base_score` = "0.0" (Type is float_t) <br>and `observables[].reputation.score_id` = "0" (Type is Integer) |
+| `connection_info.direction_id` | `local_orig` && `local_resp`  | If local_orig = 0 and local_resp = 1 --> `1` for "Inbound" <br>If local_orig = 1 and local_resp = 0 --> `2` for "Outbound" <br>If local_orig = 1 and local_resp = 1 --> `3` for "Lateral" <br>Else `0` for "Unknown" <br>(Type is Integer)    |
+
 
 
  ### Unmapped (proposed):
 
 | OCSF                        | Raw              | Zeek Field Description                                                                  |
 | --------------------------- | ---------------- | --------------------------------------------------------------------------------------- |
-| `(network_endpoint).vlan_uid` | `vlan`           | The outer VLAN for this connection, if applicable.                                    |
 | `unmapped`                  | `app`            |                                                                                         |
 | `unmapped`                  | `tunnel_parents` | If this connection was over a tunnel, indicate the uid values for any encapsulating parent connections. |
 | `unmapped`                  | `local_orig`     | Indicates if the connection is originated locally.                                      |
